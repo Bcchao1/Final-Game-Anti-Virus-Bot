@@ -1,6 +1,6 @@
 // Game: An explosive AntiVirus bot fights solo to deal with an army of malicious software. 
 // Individual Project
-// All visual Graphics custom made by myself in Aesprite 
+// All visual Graphics made by myself in Aesprite , Audio files copyright free downloaded
 
 class Menu extends Phaser.Scene {
     constructor() {
