@@ -1,3 +1,7 @@
+// Game: An explosive AntiVirus bot fights solo to deal with an army of malicious software. 
+// Individual Project
+// All visual Graphics custom made by myself in Aesprite 
+
 class Menu extends Phaser.Scene {
     constructor() {
         super("menuScene");
