@@ -2,7 +2,16 @@ let config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
-    scene: [ Menu, LevelOne, LevelTwo, FinalLevel]
+
+    physics: {
+      default: "arcade",
+      arcade: {
+          //debug: true,
+      }
+  },
+
+
+    scene: [ Menu, LevelOne, LevelTwo, FinalLevel,GameComplete]
   }
 
 let game = new Phaser.Game(config);

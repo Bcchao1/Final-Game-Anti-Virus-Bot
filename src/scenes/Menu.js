@@ -1,6 +1,6 @@
 // Game: An explosive AntiVirus bot fights solo to deal with an army of malicious software. 
 // Individual Project
-// All visual Graphics made by myself in Aesprite , Audio files copyright free downloaded
+// All visual Graphics made by myself in Aesprite and Tiled , Audio files copyright free downloaded
 
 class Menu extends Phaser.Scene {
     constructor() {
@@ -8,7 +8,13 @@ class Menu extends Phaser.Scene {
 }
 
 preload() {
+
         this.load.image('MenuBG', './assets/MenuBG1.png');
+        this.load.image('v1', './assets/virus1.png');
+        this.load.audio('walk', './assets/robowalk.wav');
+        this.load.audio('roboengine', './assets/engine.mp3');
+        this.load.audio('boom', './assets/explode.wav');
+        
 }
 
 create() {
@@ -41,26 +47,20 @@ create() {
         let textSpacer = 64;
 
 
-        this.add.text(centerX,centerY + textSpacer + 60,'WASD to move, SPACE to activate EnergyBlast', menuConfig).setOrigin(0.5);
-        this.add.text(centerX,centerY + 2*textSpacer +60, 'Press "Enter" to start', menuConfig).setOrigin(0.5);
+        this.add.text(centerX,centerY + textSpacer + 60,'WASD to Propel, SPACE to activate EnergyBlast', menuConfig).setOrigin(0.5);
+        this.add.text(centerX,centerY + textSpacer + 90,'Destroy all Viruses with EnergyBlast, then find the Exit', menuConfig).setOrigin(0.5);
+        this.add.text(centerX,centerY + textSpacer + 130, 'Press "Enter" to start', menuConfig).setOrigin(0.5);
 
         menuConfig.fontSize = 70;
         this.add.text(centerX,centerY- textSpacer, 'Anti-Virus Bot', menuConfig).setOrigin(0.5);
 
         menuConfig.backgroundColor = '#000000';
         menuConfig.color = '#000';
-
-
 }
-    
 
 update() {
-
-
         if (Phaser.Input.Keyboard.JustDown(keyENTER)) {
         this.scene.start("LevelOneScene");    
-
 }
 }
-
 }

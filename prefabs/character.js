@@ -14,6 +14,7 @@ class Character extends Phaser.GameObjects.Sprite {
 update(){
 
     //move mechanic
+    /*
 
     if(keyA.isDown && keyW.isDown && this.x > 0 && this.y >0){
         this.x -=1;
@@ -38,7 +39,7 @@ update(){
         this.y +=2;
        // projectileDirection.position.x -=2;
     }
-
+*/
     if(keyA.isDown & !this.walking.isPlaying || keyW.isDown & !this.walking.isPlaying || keyD.isDown & !this.walking.isPlaying || keyS.isDown & !this.walking.isPlaying ){
         this.walking.play();
     }
